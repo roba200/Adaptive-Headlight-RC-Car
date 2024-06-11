@@ -165,7 +165,7 @@ void detectRotation()
   float mappedValue = map(mpu.getGyroZ(), -150, 150, COUNT_LOW, COUNT_HIGH);
   if (mappedValue >= COUNT_LOW && mappedValue <= COUNT_HIGH)
   {
-    if (mappedValue < 4900 && mappedValue > 4600)
+    if (mappedValue < 4900 && mappedValue > 4600) // change this values for reduce rotation
     {
       ledcWrite(1, 4751);
     }
